@@ -21,7 +21,7 @@ imshow(original{1},'ColorMap',cmap);
 [file2, path2] = uigetfile({'*.czi'}, 'Select your image');
 filename2 = [path2,file2];
 
-[original2] = count_cells_overlay02(filename);
+[original2] = count_cells_overlay02(filename2);
 
 %% Image 2
 
@@ -37,7 +37,6 @@ end
 %% Overlayed Image
 
 figure
-tic;
 for n = 1:numel(original)
     imshow(original{n},'Colormap',cmap)
     hold on
@@ -45,7 +44,6 @@ for n = 1:numel(original)
     set(h,'AlphaData',(mimg{n}>0).*a)
     drawnow limitrate
 end
-toc;
 
 
 
