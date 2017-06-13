@@ -24,7 +24,6 @@ filename2 = [path2,file2];
 [original2] = count_cells_overlay02(filename2);
 
 %% Image 2
-
 figure
 imshow(original2{1},'ColorMap',cmap2);
 
@@ -44,7 +43,4 @@ for n = 1:numel(original)
     set(h,'AlphaData',(mimg{n}>0).*a)
     drawnow limitrate
 end
-
-
-
 
